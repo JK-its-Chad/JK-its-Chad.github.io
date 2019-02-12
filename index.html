@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
 	
 	<center>
@@ -13,11 +14,21 @@
 
 <body>
 	<div id="navbar">
-	<a href="index.html">HOME</a>
-	<a href="projects.html">PROJECTS</a>
-	<a href="about.html">ABOUT</a>
-	<a href="contact.html">CONTACT</a>
-	</div>
+		<a href="index.html">HOME</a>
+		<div class="dropdown">
+		<button class="dropbtn" onclick="DropList()">Dropdown
+			<i class="fa fa-caret-down"></i>
+			</button>
+		<div class="dropdown-content" id="dropList">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			</div>
+			</div>
+		<a href="projects.html">PROJECTS</a>
+		<a href="about.html">ABOUT</a>
+		<a href="contact.html">CONTACT</a>
+		</div>
 
 	<div id="para">
 	<h3>HOME</h3>
@@ -119,6 +130,24 @@
 	<p>|</p>
 	<p>|</p>
 	</div>
+	
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function DropList() {
+  document.getElementById("dropList").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropList = document.getElementById("dropList");
+    if (myDropList.classList.contains('show')) {
+      myDropList.classList.remove('show');
+    }
+  }
+}
+</script>
 	
 	
 </body>
