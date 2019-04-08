@@ -23,11 +23,13 @@
 }
 
 .fright{
-	text-align:right;
+	padding : 10px;
+	text-align:right !important;
 }
 
 .fleft{
-	float:left
+	padding : 10px;
+	text-align:left !important;
 }
 
 .hea{
